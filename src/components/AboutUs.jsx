@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import Lottie from "lottie-react";
+import robotAnimation from "./accesorios/flow.json"; // ruta a tu animación
 import { colors, fonts, fontSizes, shadows, borderRadius } from "../theme";
 
 const AboutUs = () => {
@@ -79,7 +81,7 @@ const AboutUs = () => {
           </motion.div>
         </motion.div>
 
-        {/* Imagen robot futurista */}
+        {/* Animación Lottie */}
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -91,16 +93,14 @@ const AboutUs = () => {
             textAlign: "center",
           }}
         >
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/1055/1055672.png"
-            alt="Robot Futurista"
+          <Lottie
+            animationData={robotAnimation}
+            loop
             style={{
               width: "100%",
-              height: "auto",
               borderRadius: borderRadius.card,
               filter: "drop-shadow(0 5px 15px rgba(0, 201, 167, 0.5))",
             }}
-            loading="lazy"
           />
         </motion.div>
       </div>

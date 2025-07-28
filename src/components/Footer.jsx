@@ -5,9 +5,9 @@ import { colors, fonts, fontSizes } from "../theme";
 import logotipo from "../assets/logotipo.png";
 
 const socialLinks = [
-  { Icon: Facebook, url: "https://facebook.com" },
-  { Icon: Instagram, url: "https://instagram.com" },
-  { Icon: FaWhatsapp, url: "https://wa.me/549xxxxxxxxxx" }, // <-- Reemplazá con tu número real
+  { Icon: Facebook, url: "https://www.facebook.com/share/15PdzoDg6z/?mibextid=wwXIfr" },
+  { Icon: Instagram, url: "https://www.instagram.com/serviciotecnicounitec?igsh=cnMydjNxcGxqdWpv&utm_source=qr" },
+  { Icon: FaWhatsapp, url: "https://wa.me/+5493854335822" }, // <-- Reemplazá con tu número real
 ];
 
 const handleShare = () => {

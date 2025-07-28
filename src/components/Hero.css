@@ -1,0 +1,47 @@
+.gradient-0 {
+  background: linear-gradient(90deg, #22c55e, #3b82f6); /* verde brillante + azul */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-1 {
+  background: linear-gradient(90deg, #f59e0b, #ef4444); /* amarillo anaranjado + rojo */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-2 {
+  background: linear-gradient(90deg, #10b981, #8b5cf6); /* verde esmeralda + morado */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-3 {
+  background: linear-gradient(90deg, #f43f5e, #2563eb); /* rosa fuerte + azul oscuro */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-4 {
+  background: linear-gradient(90deg, #eab308, #3b82f6); /* amarillo + azul brillante */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-5 {
+  background: linear-gradient(90deg, #ec4899, #f97316); /* rosa + naranja */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-6 {
+  background: linear-gradient(90deg, #22d3ee, #9333ea); /* celeste + violeta */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-7 {
+  background: linear-gradient(90deg, #84cc16, #f43f5e); /* verde limón + rosa fuerte */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

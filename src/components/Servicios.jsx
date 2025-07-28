@@ -1,6 +1,11 @@
 import { useState, useRef, useEffect } from "react";
-import { Wrench, MonitorSmartphone, Unlock } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Lottie from "lottie-react";
+
+import repairAnimation from "./lottie/iPhone.json";
+import unlockAnimation from "./lottie/Unlock.json";
+import pcAnimation from "./lottie/Computer.json";
+
 import { colors, fonts, fontSizes, shadows, borderRadius } from "../theme";
 import ServiceCards from "./ServiceCards";
 
@@ -20,7 +25,13 @@ const gradientTransition = {
 const services = [
   {
     title: "Reparación de Celulares",
-    icon: <MonitorSmartphone size={48} />,
+    icon: (
+      <Lottie
+        animationData={repairAnimation}
+        loop
+        style={{ height: 80, margin: "0 auto" }}
+      />
+    ),
     iconColor: colors.primaryGreen,
     description: "Pantallas, baterías, pines de carga, cámaras, y más.",
     details: [
@@ -32,7 +43,13 @@ const services = [
   },
   {
     title: "Desbloqueos",
-    icon: <Unlock size={48} />,
+    icon: (
+      <Lottie
+        animationData={unlockAnimation}
+        loop
+        style={{ height: 80, margin: "0 auto" }}
+      />
+    ),
     iconColor: "#fbbf24",
     description: "Google Account, netbooks del Gobierno, PIN y patrones.",
     details: [
@@ -44,14 +61,20 @@ const services = [
   },
   {
     title: "PCs y Notebooks",
-    icon: <Wrench size={48} />,
+    icon: (
+      <Lottie
+        animationData={pcAnimation}
+        loop
+        style={{ height: 80, margin: "0 auto" }}
+      />
+    ),
     iconColor: "#3b82f6",
     description: "Formateo, limpieza, SSD, RAM, virus, instalación de drivers.",
     details: [
       "Formateo e instalación de Windows",
       "Mejoras con SSD y ampliación de RAM",
       "Limpieza física y mantenimiento",
-      "Eliminacion de virus y drivers actualizados",
+      "Eliminación de virus y drivers actualizados",
     ],
   },
 ];
@@ -204,10 +227,8 @@ const Servicios = () => {
         ))}
       </div>
 
-      {/* Espaciado extra visual */}
       <div style={{ height: "5rem" }} />
 
-      {/* Modal */}
       <AnimatePresence>
         {selected !== null && (
           <motion.div
@@ -290,28 +311,28 @@ const Servicios = () => {
               </ul>
 
               <a
-  href="https://wa.me/543854335822?text=Hola%2C%20quiero%20consultar%20por%20un%20servicio%20de%20reparación"
-  target="_blank"
-  rel="noopener noreferrer"
-  style={{
-    backgroundColor: colors.primaryGreen,
-    color: "#fff",
-    padding: "1rem",
-    borderRadius: borderRadius.default,
-    textAlign: "center",
-    display: "block",
-    fontWeight: "700",
-    textDecoration: "none",
-    boxShadow: shadows.button,
-  }}
->
-  Solicitar este servicio por WhatsApp
-</a>
-
+                href="https://wa.me/543854335822?text=Hola%2C%20quiero%20consultar%20por%20un%20servicio%20de%20reparación"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  backgroundColor: colors.primaryGreen,
+                  color: "#fff",
+                  padding: "1rem",
+                  borderRadius: borderRadius.default,
+                  textAlign: "center",
+                  display: "block",
+                  fontWeight: "700",
+                  textDecoration: "none",
+                  boxShadow: shadows.button,
+                }}
+              >
+                Solicitar este servicio por WhatsApp
+              </a>
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
+
       <ServiceCards />
     </section>
   );

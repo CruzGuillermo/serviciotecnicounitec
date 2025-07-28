@@ -1,0 +1,44 @@
+@keyframes neonPulse {
+  0%, 100% {
+    text-shadow:
+      0 0 6px #6a11cb,
+      0 0 12px #2575fc,
+      0 0 24px #6a11cb;
+    filter: brightness(1);
+  }
+  50% {
+    text-shadow:
+      0 0 10px #6a11cb,
+      0 0 20px #2575fc,
+      0 0 40px #6a11cb;
+    filter: brightness(1.1);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.typewriter {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(270deg, #6a11cb, #2575fc, #6a11cb);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 12s ease infinite, neonPulse 4s ease-in-out infinite;
+  letter-spacing: 0.05em; /* menos espacio entre letras */
+  user-select: none;
+  cursor: default;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: none; /* Mayúsculas y minúsculas normales */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: none; /* Sin cursor */
+  position: relative;
+}
